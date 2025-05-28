@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="main-title">AKYNA MATATA - IB Science Explorers</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #e0f2fe, white);
+        color: #333;
+      }
+      header {
+        background-color: #3b82f6;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      header p {
+        font-size: 1.25rem;
+      }
+      section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      .card {
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      .card button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #333;
+        background: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+      }
+      .subject-section {
+        margin-top: 2rem;
+      }
+      .methodology-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .step {
+        background-color: #f1f5f9;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+      }
+      .step-placeholder {
+        width: 100%;
+        height: 150px;
+        background-color: #cbd5e1;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .team-member {
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        width: 200px;
+        text-align: center;
+      }
+      .footer {
+        background-color: #bfdbfe;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.875rem;
+      }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-green-50 to-green-200 text-green-900">
+<div class="text-right p-4">
+<label class="mr-2" for="language-select">🌐 Language:</label>
+<select class="border p-1 rounded" id="language-select">
+<option value="en">English</option>
+<option value="kk">Қазақша</option>
+<option value="ru">Русский</option></select>
+</div>
+<header class="bg-green-600 text-white p-6 shadow-md">
+<h1 class="text-6xl font-bold" id="main-title" id="main-title">AKYNA MATATA - IB Science Explorers</h1>
+<p class="text-lg mt-2" id="main-subtitle" id="main-subtitle">Our Journey through Physics, Chemistry, and Biology!</p>
+</header>
+<section class="p-6 mx-auto">
+<h2 class="text-3xl font-semibold mb-4" id="section-about" id="section-about">About Our Collaborative Project</h2>
+<p class="text-lg" id="section-overview" id="section-overview">
+      We are a group of IB students working together to explore science through hands-on experiments. Our project covers three exciting areas: Physics, Chemistry, and Biology. On this site, you'll see our process, results, and what we learned along the way!
+    </p>
+</section>
+<section class="p-6 max-w-6xl mx-auto flex justify-center">
+<img alt="Science Explorers Banner" class="rounded-2xl shadow-lg w-full max-w-4xl object-cover" src="/science-banner.png"/>
+</section>
+<section class="p-6 max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-6"><span id="section-team-title">👩‍🔬 Meet the Team - AKYNA MATATA</span></h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white rounded-xl shadow p-4 text-center">
+<h3 class="text-sm font-semibold">Mikhaylov Kiundiul &amp; Aitasova Nazira</h3>
+<p class="text-xs text-gray-600"><span id="team-role-1">Computer Science</span></p>
+</div>
+<div class="bg-white rounded-xl shadow p-4 text-center">
+<h3 class="text-sm font-semibold"><span id="team-name-2">Bolatov Yerasyl</span></h3>
+<p class="text-xs text-gray-600" id="physics-title"><span id="card-physics-title">Physics</span></p>
+</div>
+<div class="bg-white rounded-xl shadow p-4 text-center">
+<h3 class="text-sm font-semibold"><span id="team-name-3">Alibek Almansur</span></h3>
+<p class="text-xs text-gray-600" id="chemistry-title"><span id="card-chemistry-title">Chemistry</span></p>
+</div>
+<div class="bg-white rounded-xl shadow p-4 text-center">
+<h3 class="text-sm font-semibold"><span id="team-name-4">Mukhamejan Nurganym</span></h3>
+<p class="text-xs text-gray-600" id="biology-title"><span id="card-biology-title">Biology</span></p>
+</div>
+</div>
+</section>
+<section class="p-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-yellow-100 rounded-2xl shadow-md p-6 text-center">
+<h3 class="text-2xl font-bold mb-2" id="physics-title"><span id="card-physics-title">Physics</span></h3>
+<p class="mb-4"><span id="physics-desc"><span id="card-physics-desc">Discover motion, forces, and energy through exciting experiments!</span></span></p>
+<a class="text-blue-700 underline" href="#physics" id="btn-physics"><span id="card-physics-btn">Explore Physics</span></a>
+</div>
+<div class="bg-pink-100 rounded-2xl shadow-md p-6 text-center">
+<h3 class="text-2xl font-bold mb-2" id="chemistry-title"><span id="card-chemistry-title">Chemistry</span></h3>
+<p class="mb-4"><span id="chemistry-desc"><span id="card-chemistry-desc">Experiment with reactions and learn about materials and change!</span></span></p>
+<a class="text-blue-700 underline" href="#chemistry" id="btn-chemistry"><span id="card-chemistry-btn">Explore Chemistry</span></a>
+</div>
+<div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
+<h3 class="text-2xl font-bold mb-2" id="biology-title"><span id="card-biology-title">Biology</span></h3>
+<p class="mb-4"><span id="biology-desc"><span id="card-biology-desc">Explore the wonders of living things and our natural world!</span></span></p>
+<a class="text-blue-700 underline" href="#biology" id="btn-biology"><span id="card-biology-btn">Explore Biology</span></a>
+</div>
+</section>
+<!-- Sections: Physics, Chemistry, Biology -->
+<section class="p-6 max-w-6xl mx-auto" id="physics"><div class="bg-white rounded-2xl shadow p-6">
+<h2 class="text-3xl font-bold mb-4"><span id="card-physics-title">Physics</span></h2>
+<h3 class="text-xl font-semibold mb-2" id="section-hypothesis"><span id="section-hypothesis-title">Hypothesis</span></h3>
+<p class="mb-4"><span id="physics-hypothesis">As the angle of incidence of the light source decreases (meaning the light hits the solar panel more directly), the voltage and current output of the solar panel will increase.</span></p>
+<h3 class="text-xl font-semibold mb-2" id="section-variables"><span id="section-variables-title">Variables</span></h3>
+<ul class="list-disc list-inside mb-4">
+<li id="var-independentp">Independent:</strong> Angle of incidence of light (0°, 30°, 60°, 90°)</li>
+<li id="var-dependentp">Dependent:</strong> Current (A), Voltage (V)</li>
+<li id="var-controlp">Control:</strong> Fixed light intensity</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2" id="section-methodology"><span id="section-methodology-title">Methodology</span></h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steponephysics.png" id="firststepp"/>
+<p id="steponephysics">Set up solar panel connected to multimeter.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steptwophysics.png"/>
+<p id="steptwophysics">Shine light at 0° angle, record current and voltage.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepthreephysics.png"/>
+<p id="stepthreephysics">Change angle in steps (30°, 60°, 90°), record values.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepfourphysics.png"/>
+<p id="stepfourphysics">Compare how electrical output varies with angle.</p>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2" id="section-results"><span id="section-results-title">Results</span></h3>
+<p class="text-gray-600 italic"><span id="results-pending">(To be added)</span></p>
+<img alt="Result image" class="w-full h-48 object-cover rounded-md mt-4" src="resultbiology.png"/></div></section>
+<section class="p-6 max-w-6xl mx-auto" id="chemistry"><div class="bg-white rounded-2xl shadow p-6">
+<h2 class="text-3xl font-bold mb-4" id="chemistry-title"><span id="card-chemistry-title">Chemistry</span></h2>
+<h3 class="text-xl font-semibold mb-2" id="section-hypothesisc"><span id="section-hypothesis-titlec">Hypothesis</span></h3>
+<p class="mb-4"><span id="chemistry-hypothesis">Increasing salinity will increase water conductivity and slightly decrease pH due to dissolved ions.</span></p>
+<h3 class="text-xl font-semibold mb-2" id="section-variablesc"><span id="section-variables-titlec">Variables</span></h3>
+<ul class="list-disc list-inside mb-4">
+<li id="var-independentc">Independent:</strong> Angle of incidence of light (0°, 30°, 60°, 90°)</li>
+<li id="var-dependentc">Dependent:</strong> Current (A), Voltage (V)</li>
+<li id="var-controlc">Control:</strong> Fixed light intensity</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2" id="section-methodologyc"><span id="section-methodology-titlec">Methodology</span></h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steponechemistry.png"/>
+<p id="steponechemistry">Set up solar panel connected to multimeter.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steptwochemistry.png"/>
+<p id="steptwochemistry">Shine light at 0° angle, record current and voltage.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepthreechemistry.png"/>
+<p id="stepthreechemistry">Change angle in steps (30°, 60°, 90°), record values.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepfourchemistry.png"/>
+<p id="stepfourchemistry">Compare how electrical output varies with angle.</p>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2" id="section-resultsc"><span id="section-results-titlec">Results</span></h3>
+<p class="text-gray-600 italic"><span id="results-pending">(To be added)</span></p>
+<img alt="Result image" class="w-full h-48 object-cover rounded-md mt-4" src="resultchemistry.png"/></div></section>
+<section class="p-6 max-w-6xl mx-auto" id="biology"><div class="bg-white rounded-2xl shadow p-6">
+<h2 class="text-3xl font-bold mb-4" id="biology-title"><span id="card-biology-title">Biology</span></h2>
+<h3 class="text-xl font-semibold mb-2" id="section-hypothesisb"><span id="section-hypothesis-titleb">Hypothesis</span></h3>
+<p class="mb-4"><span id="biology-hypothesis">Increasing water salinity will decrease the germination rate and seedling growth due to osmotic stress  </span></p>
+<h3 class="text-xl font-semibold mb-2" id="section-variablesb"><span id="section-variables-titleb">Variables</span></h3>
+<ul class="list-disc list-inside mb-4">
+<li id="var-independentb">Independent:</strong> Water salinity concentration (0%, 0.5%, 1%, 1.5%, 2% NaCl solutions)</li>
+<li id="var-dependentb">Dependent:</strong> Germination rate, seedling growth</li>
+<li id="var-controlb">Control:</strong> Fixed light exposure</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2" id="section-methodologyb"><span id="section-methodology-titleb">Methodology</span></h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steponebiology.png"/>
+<p id="steponebiology">Prepare 5 NaCl concentrations and label 5 beakers with their respective salt concentrations</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="steptwobiology.png"/>
+<p id="steptwobiology">Count and place 10 radish seeds on each of 15 labeled petri dishes (3 trials per concentration) with filter paper.</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepthreebiology.png"/>
+<p id="stepthreebiology">Use a dropper to apply 3 mL of the corresponding NaCl solution to each dish</p>
+</div>
+<div>
+<img alt="Step image" class="w-full h-32 object-cover rounded-md mb-2" src="stepfourbiology.png"/>
+<p id="stepfourbiology">After 24 hours, count germinated seeds, calculate percentages</p>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2" id="section-resultsb"><span id="section-results-titleb">Results</span></h3>
+<p class="text-gray-600 italic"><span id="results-pending">(To be added)</span></p>
+<img alt="Result image" class="w-full h-48 object-cover rounded-md mt-4" src="resultbiology.png"/></div></section>
+<footer class="bg-green-300 text-center text-sm py-4 mt-10">
+    © 2025 AKYNA MATATA. All rights reserved.
+  </footer>
+
+
+<script>
+const translations = {
+  en: {
+    "main-title": "AKYNA MATATA - IB Science Explorers",
+    "main-subtitle": "Our Journey through Physics, Chemistry, and Biology!",
+    "section-overview": "We are a group of IB students working together to explore science through hands-on experiments. Our project covers three exciting areas: Physics, Chemistry, and Biology. On this site, you'll see our process, results, and what we learned along the way!",
+    "section-about": "About Our Collaborative Project",
+    "section-team-title": "👩‍🔬 Meet the Team - AKYNA MATATA",
+    "team-name-1": "Mikhaylov Kiundiul & Aitasova Nazira",
+    "team-role-1": "Computer Science",
+    "team-name-2": "Bolatov Yerasyl",
+    "team-role-2": "Physics",
+    "team-name-3": "Alibek Almansur",
+    "team-role-3": "Chemistry",
+    "team-name-4": "Mukhamejan Nurganym",
+    "team-role-4": "Biology",
+    "card-physics-title": "Physics",
+    "card-physics-desc": "Discover motion, forces, and energy through exciting experiments!",
+    "card-physics-btn": "Explore Physics",
+    "card-chemistry-title": "Chemistry",
+    "card-chemistry-desc": "Experiment with reactions and learn about materials and change!",
+    "card-chemistry-btn": "Explore Chemistry",
+    "card-biology-title": "Biology",
+    "card-biology-desc": "Explore the wonders of living things and our natural world!",
+    "card-biology-btn": "Explore Biology",
+    "section-hypothesis-title": "Hypothesis",
+    "section-hypothesis-titleb": "Hypothesis",
+    "section-hypothesis-titlec": "Hypothesis",
+    "section-variables-title": "Variables",
+    "section-variables-titlec": "Variables",
+    "section-variables-titleb": "Variables",
+    "section-methodology-title": "Methodology",
+    "section-methodology-titlec": "Methodology",
+    "section-methodology-titleb": "Methodology",
+    "steponephysics": "Set up solar panel connected to multimeter.",
+    "steptwophysics": "Shine light at 0° angle, record current and voltage",
+    "stepthreephysics": "Change angle in steps (30°, 60°, 90°), record values",
+    "stepfourphysics": "Compare how electrical output varies with angle",
+    "steponechemistry": "Настроить солнечную панель, подключенную к мультиметру",
+    "steptwochemistry": "Посветите светом под углом 0°, запишите ток и напряжение.",
+    "stepthreechemistry": "Изменяйте угол пошагово (30°, 60°, 90°), записывайте значения.",
+    "stepfourchemistry": "Сравните, как электрическая мощность меняется в зависимости от угла",
+    "steponebiology": "Prepare 5 NaCl concentrations and label 5 beakers with their respective salt concentrations",
+    "steptwobiology": "Place 10 radish seeds on each of 15 petri dishes (3 per concentration)",
+    "stepthreebiology": "Add 3 mL of the matching solution every 12 hours to keep seeds moist.",
+    "stepfourbiology": "After 24 hours, count germinated seeds, calculate percentages, and graph the averages",
+    "section-results-title": "Results",
+    "section-results-titlec": "Results",
+    "section-results-titleb": "Results",
+    "results-pending": "(To be added)",
+    "results-pendingс": "(To be added)",
+    "results-pendingb": "(To be added)",
+    "physics-hypothesis": "As the angle of incidence of the light source decreases (meaning the light hits the solar panel more directly), the voltage and current output of the solar panel will increase",
+    "biology-hypothesis": "Increasing water salinity will decrease the germination rate and seedling growth due to osmotic stress",
+    "var-independentp": "Independent: Angle of incidence of light (0°, 30°, 60°, 90°)",
+    "var-dependentp": "Dependent: Current (A), Voltage (V)",
+    "var-controlp": "Control: Fixed light intensity",
+    "var-independentb": "Independent: Water salinity concentration (0%, 0.5%, 1%, 1.5%, 2% NaCl solutions)",
+    "var-dependentb": "Dependent: Germination rate, seedling growth",
+    "var-controlb": "Control: Fixed light exposure",
+  },
+  ru: {
+    "main-title": "АКИНА МАТАТА - Исследователи науки IB",
+    "main-subtitle": "Наш путь через физику, химию и биологию!",
+    "section-overview": "Мы — группа студентов IB, работающих вместе над изучением науки с помощью практических экспериментов. Наш проект охватывает три захватывающие области: физику, химию и биологию. На этом сайте вы увидите наш процесс, результаты и то, чему мы научились на этом пути!",
+    "section-about": "О нашем совместном проекте",
+    "section-team-title": "👩‍🔬 Наша команда - AKYNA MATATA",
+    "team-name-1": "Михаилов Кюндюл & Айтасова Назира",
+    "team-role-1": "Информатика",
+    "team-name-2": "Болатов Ерасыл",
+    "team-role-2": "Физика",
+    "team-name-3": "Алибек Альмансур",
+    "team-role-3": "Химия",
+    "team-name-4": "Мухамеджан Нурганым",
+    "team-role-4": "Биология",
+    "card-physics-title": "Физика",
+    "card-physics-desc": "Изучайте движение, силы и энергию через увлекательные эксперименты!",
+    "card-physics-btn": "Изучить физику",
+    "card-chemistry-title": "Химия",
+    "card-chemistry-desc": "Экспериментируйте с реакциями и изучайте материалы и изменения!",
+    "card-chemistry-btn": "Изучить химию",
+    "card-biology-title": "Биология",
+    "card-biology-desc": "Исследуйте чудеса живой природы и нашего мира!",
+    "card-biology-btn": "Изучить биологию",
+    "section-hypothesis-title": "Гипотеза",
+    "section-hypothesis-titleb": "Гипотеза",
+    "section-hypothesis-titlec": "Гипотеза",
+    "section-variables-title": "Переменные",
+    "section-variables-titlec": "Переменные",
+    "section-variables-titleb": "Переменные",
+    "section-methodology-title": "Методология",
+    "section-methodology-titlec": "Методология",
+    "section-methodology-titleb": "Методология",
+    "steponephysics": "Настроить солнечную панель, подключенную к мультиметру",
+    "steptwophysics": "Посветите светом под углом 0°, запишите ток и напряжение.",
+    "stepthreephysics": "Изменяйте угол пошагово (30°, 60°, 90°), записывайте значения.",
+    "stepfourphysics": "Сравните, как электрическая мощность меняется в зависимости от угла",
+    "steponechemistry": "Настроить солнечную панель, подключенную к мультиметру",
+    "steptwochemistry": "Посветите светом под углом 0°, запишите ток и напряжение.",
+    "stepthreechemistry": "Изменяйте угол пошагово (30°, 60°, 90°), записывайте значения.",
+    "stepfourchemistry": "Сравните, как электрическая мощность меняется в зависимости от угла",
+    "steponebiology": "Подготовьте 5 концентраций NaCl и соответствующим образом промаркируйте стаканы.",
+    "steptwobiology": "Поместите 10 семян редиса в каждую из 15 чашек Петри (по 3 на концентрацию)",
+    "stepthreebiology": "Добавляйте 3 мл соответствующего раствора каждые 12 часов, чтобы семена оставались влажными",
+    "stepfourbiology": "Через 24 часа подсчитайте проросшие семена, рассчитайте проценты и нанесите на график средние значения",
+    "section-results-title": "Результаты",
+    "section-results-titlec": "Результаты",
+    "section-results-titleb": "Результаты",
+    "results-pending": "(Будет добавлено)",
+    "results-pendingс": "(To be added)",
+    "results-pendingb": "(To be added)",
+    "physics-hypothesis": "По мере уменьшения угла падения источника света (т.е. когда свет падает на солнечную панель более прямо), выходное напряжение и ток солнечной панели будут увеличиваться.",
+    "biology-hypothesis": "Повышение солености воды приведет к снижению скорости прорастания и роста рассады из-за осмотического стресса",
+    "var-independentp": "Независимая: Угол падения света (0°, 30°, 60°, 90°)",
+    "var-dependentp": "Зависимая: Ток (А), Напряжение (В)",
+    "var-controlp": "Контроль: Постоянная световая интенсивность",
+    "var-independentb": "Независимая: Концентрация солености воды (0%, 0,5%, 1%, 1,5%, 2% растворы NaCl)",
+    "var-dependentb": "Зависимая: от скорости прорастания, роста рассады",
+    "var-controlb": "Контроль: Фиксированная экспозиция света",
+  },
+  kk: {
+    "main-title": "AKYNA MATATA - IB Ғылым Зерттеушілері",
+    "main-subtitle": "Біз физика, химия және биологияны зерттейміз!",
+    "section-overview": "Біз практикалық эксперименттер арқылы ғылымды зерттеу үшін бірге жұмыс істейтін IB студенттерінің тобымыз. Біздің жоба үш қызықты саланы қамтиды: физика, химия және биология. Бұл сайтта сіз біздің процесті, нәтижелерді және жолда не үйренгенімізді көресіз!",
+    "section-about": "Біздің бірлескен жобамыз туралы",
+    "section-team-title": "👩‍🔬 Топ мүшелері - AKYNA MATATA",
+    "team-name-1": "Михаилов Киундиул және Айтасова Назира",
+    "team-role-1": "Информатика",
+    "team-name-2": "Болатов Ерасыл",
+    "team-role-2": "Физика",
+    "team-name-3": "Алибек Алмансур",
+    "team-role-3": "Химия",
+    "team-name-4": "Мұхамеджан Нұрғаным",
+    "team-role-4": "Биология",
+    "card-physics-title": "Физика",
+    "card-physics-desc": "Қозғалыс, күш және энергияны тәжірибе арқылы зерттеңіз!",
+    "card-physics-btn": "Физиканы зерттеу",
+    "card-chemistry-title": "Химия",
+    "card-chemistry-desc": "Реакцияларды зерттеп, заттар мен өзгерістер туралы біліңіз!",
+    "card-chemistry-btn": "Химияны зерттеу",
+    "card-biology-title": "Биология",
+    "card-biology-desc": "Тірі табиғаттың кереметтерін зерттеңіз!",
+    "card-biology-btn": "Биологияны зерттеу",
+    "section-hypothesis-title": "Болжам",
+    "section-hypothesis-titleb": "Болжам",
+    "section-hypothesis-titlec": "Болжам",
+    "section-variables-title": "Айнымалылар",
+    "section-variables-titlec": "Айнымалылар",
+    "section-variables-titleb": "Айнымалылар",
+    "section-methodology-title": "Әдіснама",
+    "section-methodology-titlec": "Әдіснама",
+    "section-methodology-titleb": "Әдіснама",
+    "steponephysics": "Мультиметрге қосылған күн панелін орнатыңыз",
+    "steptwophysics": "0° бұрышпен Жарық түсіріңіз, ток пен кернеуді жазыңыз",
+    "stepthreephysics": "Бұрышты біртіндеп өзгертіңіз(30°, 60°, 90°), мәндерді жазыңыз.",
+    "stepfourphysics": "Электр қуатының бұрышқа байланысты қалай өзгеретінін салыстырыңыз",
+    "steponechemistry": "Настроить солнечную панель, подключенную к мультиметру",
+    "steptwochemistry": "Посветите светом под углом 0°, запишите ток и напряжение.",
+    "stepthreechemistry": "Изменяйте угол пошагово (30°, 60°, 90°), записывайте значения.",
+    "stepfourchemistry": "Сравните, как электрическая мощность меняется в зависимости от угла",
+    "steponebiology": "5 NaCl концентрациясын дайындаңыз және көзілдірікті сәйкесінше белгілеңіз.",
+    "steptwobiology": "15 кесе петридің әрқайсысына 10 шалғам тұқымын салыңыз (бір концентрацияға 3)",
+    "stepthreebiology": "Тұқымдарды ылғалды ұстау үшін әр 12 сағат сайын 3 мл тиісті ерітінді қосыңыз",
+    "stepfourbiology": "24 сағаттан кейін өнген тұқымдарды есептеңіз, пайыздарды есептеңіз және орташа мәндерді сызыңыз",
+    "section-results-title": "Нәтижелер",
+    "section-results-titlec": "Нәтижелер",
+    "section-results-titleb": "Нәтижелер",
+    "results-pending": "(To be added)",
+    "results-pendingс": "(To be added)",
+    "results-pendingb": "(To be added)",
+    "physics-hypothesis": "Жарық көзінің түсу бұрышы азайған сайын (яғни жарық күн панеліне тікелей түскенде), күн панелінің шығыс кернеуі мен тогы артады.",
+    "biology-hypothesis": "Судың тұздылығының жоғарылауы осмостық стресстің әсерінен көшеттердің өну және өсу жылдамдығының төмендеуіне әкеледі",
+    "var-independentp": "Тәуелсіз: жарықтың түсу бұрышы(0°, 30°, 60°, 90°)",
+    "var-dependentp": "Тәуелді: Ток (А), Кернеу (В)",
+    "var-controlp": "Бақылау: тұрақты жарық қарқындылығы",
+    "var-independentb": "Тәуелсіз: судың тұздылық концентрациясы(0%, 0,5%, 1%, 1,5%, 2% NaCl ерітінділері)",
+    "var-dependentb": "Тәуелді: өну жылдамдығына, көшеттердің өсуіне",
+    "var-controlb": "Бақылау: жарықтың тұрақты экспозициясы",
+  }
+};
+
+// Language switch logic
+document.getElementById("language-select").addEventListener("change", function () {
+  const lang = this.value;
+  for (const id in translations[lang]) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = translations[lang][id];
+  }
+});
+</script>
+
+</body>
+</html>
